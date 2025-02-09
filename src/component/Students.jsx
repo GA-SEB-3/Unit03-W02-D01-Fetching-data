@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import CreateStudent from './CreateStudent'
 
 function Students() {
 
@@ -21,11 +22,14 @@ function Students() {
     //                  1. function
     //                  2. array
 
-    useEffect(()=>{getAllStudents()},[])
+    useEffect(()=>{
+        getAllStudents()
+    },[])
 
   return (
     <div>
         <h1>All Students</h1>
+ 
 
         {students.map((oneStudent)=>
         <div key={oneStudent.id}>
@@ -33,6 +37,7 @@ function Students() {
         </div>
         )}
       
+      <CreateStudent getAllStudents = {getAllStudents}/>
     </div>
   )
 }

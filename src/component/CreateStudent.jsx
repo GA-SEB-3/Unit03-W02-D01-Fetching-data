@@ -2,10 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
-function CreateStudent() {
+function CreateStudent(props) {
     const [studentName,setStudentName] = useState("")
-    const [number,setNumber] = useState("")
-
 
     function handleChange(event){
         setStudentName(event.target.value)
@@ -14,11 +12,12 @@ function CreateStudent() {
     async function handleSubmit(event){
         event.preventDefault()
         const newStudent = {
-            studentName: studentName,
-            phoneNumber: number
+            studentName: studentName
         }
         console.log(newStudent)
         await axios.post("https://omar-ga-class.onrender.com/students",newStudent)
+        props.getAllStudents()
+        setStudentName("")
     }
   return (
     <div>
@@ -28,18 +27,11 @@ function CreateStudent() {
         type="text" 
         name='studentName'
         id='studentName'
-        value={number}
-        onChange={(e)=>{setNumber(e.target.value)}}
-        />
-
-<label htmlFor="phoneNumber">Number</label>
-        <input 
-        type="text" 
-        name='phoneNumber'
-        id='phoneNumber'
         value={studentName}
         onChange={handleChange}
         />
+
+        
 
         <button>Create Student</button>
       </form>

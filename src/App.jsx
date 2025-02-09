@@ -12,10 +12,10 @@ function App() {
   return (
     <>
     {/* <Countries/> */}
-      {/* <Students/> */}
+      <Students/>
       {/* <OneStudent/> */}
       {/* <OneCountry/> */}
-      <CreateStudent/>
+      {/* <CreateStudent/> */}
     </>
   )
 }
