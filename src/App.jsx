@@ -1,5 +1,6 @@
 
 import './App.css'
+import Countries from './component/Countries'
 import Students from './component/Students'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
   console.log("App Component")
   return (
     <>
-      <Students/>
+    <Countries/>
+      {/* <Students/> */}
     </>
   )
 }
