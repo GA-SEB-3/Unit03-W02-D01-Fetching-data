@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function OneStudent() {
+
+    // Exercise 2:
+    // for the rest countries API get the data for bahrain
+    // once you get the data show the name of the country of bahrain
+    // BONUS: Show the flag and population as well 
+
+
     // 1. create the state
     const [student,setStudent] = useState(null)
 
