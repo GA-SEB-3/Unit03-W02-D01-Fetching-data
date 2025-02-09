@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import CreateStudent from './CreateStudent'
+import { Spin } from "antd";
 
 function Students() {
 
@@ -30,6 +31,7 @@ function Students() {
     <div>
         <h1>All Students</h1>
  
+        {students.length ===0 &&  <Spin />}
 
         {students.map((oneStudent)=>
         <div key={oneStudent.id}>
