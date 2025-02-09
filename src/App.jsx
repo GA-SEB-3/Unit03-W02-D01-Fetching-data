@@ -8,8 +8,8 @@ function App() {
   console.log("App Component")
   return (
     <>
-    <Countries/>
-      {/* <Students/> */}
+    {/* <Countries/> */}
+      <Students/>
     </>
   )
 }
