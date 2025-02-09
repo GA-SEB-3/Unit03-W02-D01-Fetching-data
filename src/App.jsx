@@ -1,6 +1,7 @@
 
 import './App.css'
 import Countries from './component/Countries'
+import OneStudent from './component/OneStudent'
 import Students from './component/Students'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
     {/* <Countries/> */}
-      <Students/>
+      {/* <Students/> */}
+      <OneStudent/>
     </>
   )
 }

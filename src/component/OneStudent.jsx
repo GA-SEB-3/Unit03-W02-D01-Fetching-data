@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function OneStudent() {
@@ -11,9 +11,22 @@ function OneStudent() {
         console.log(studentValue.data)
         setStudent(studentValue.data)
     }
+
+    useEffect(()=>{
+        getOneStudent()
+    },[])
+
+    const teacher = "OMar"
+
   return (
     <div>
-      
+      {student && (
+        <div>
+            <h1>name:{student.studentName}</h1>
+            <p>id:{student.id}</p>
+
+        </div>
+      )}
     </div>
   )
 }
